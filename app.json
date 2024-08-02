@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "Bookers",
+    "slug": "project",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/images/splash.png",
+    "scheme": "bookersapp",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.alisher09.bookersapp"
+    },
+    "android": {
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/splash.png",
+        "backgroundColor": "#000"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.SCHEDULE_EXACT_ALARM"
+      ],
+      "package": "com.alisher09.bookersapp"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/splash.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location.",
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos."
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "icon": "./local/assets/image/splash.png",
+          "color": "#ffffff",
+          "sounds": [
+            "./local/assets/notification-sound.wav"
+          ]
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2845a562-824b-43cf-8353-815ce3b52fee",
+        "apiBaseUrl": "https://app.bookers.one/"
+      }
+    }
+  }
+}
